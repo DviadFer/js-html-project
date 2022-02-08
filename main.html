@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo html-css-js</title>
+    <link rel="stylesheet" href="./estilos/main.css">
+</head>
+<body>
+    <header>
+        <img src="https://cdn.freebiesupply.com/logos/large/2x/power-house-gym-logo-black-and-white.png" alt="">
+        <p>Asociación Deportiva AFUNDA</p>
+    </header>
+    <main>
+        <div class="nav">
+            <div class="boton activo">Calcular IMC</div>
+            <div class="boton">Calcular FCM</div>
+            <div class="boton">Calcular categoría</div>
+            <div class="boton">Horario</div>
+            <div class="boton">Tienda</div>
+            <div class="boton carrito"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 19.25 19.25" style="enable-background:new 0 0 19.25 19.25;" xml:space="preserve">
+           <g>
+               <g id="Layer_1_107_">
+                   <g>
+                       <path style="fill:#ffffff;" d="M19.006,2.97c-0.191-0.219-0.466-0.345-0.756-0.345H4.431L4.236,1.461
+                           C4.156,0.979,3.739,0.625,3.25,0.625H1c-0.553,0-1,0.447-1,1s0.447,1,1,1h1.403l1.86,11.164c0.008,0.045,0.031,0.082,0.045,0.124
+                           c0.016,0.053,0.029,0.103,0.054,0.151c0.032,0.066,0.075,0.122,0.12,0.179c0.031,0.039,0.059,0.078,0.095,0.112
+                           c0.058,0.054,0.125,0.092,0.193,0.13c0.038,0.021,0.071,0.049,0.112,0.065c0.116,0.047,0.238,0.075,0.367,0.075
+                           c0.001,0,11.001,0,11.001,0c0.553,0,1-0.447,1-1s-0.447-1-1-1H6.097l-0.166-1H17.25c0.498,0,0.92-0.366,0.99-0.858l1-7
+                           C19.281,3.479,19.195,3.188,19.006,2.97z M17.097,4.625l-0.285,2H13.25v-2H17.097z M12.25,4.625v2h-3v-2H12.25z M12.25,7.625v2
+                           h-3v-2H12.25z M8.25,4.625v2h-3c-0.053,0-0.101,0.015-0.148,0.03l-0.338-2.03H8.25z M5.264,7.625H8.25v2H5.597L5.264,7.625z
+                            M13.25,9.625v-2h3.418l-0.285,2H13.25z"/>
+                       <circle style="fill:#ffffff;" cx="6.75" cy="17.125" r="1.5"/>
+                       <circle style="fill:#ffffff;" cx="15.75" cy="17.125" r="1.5"/>
+                   </g>
+               </g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+           </svg></div>
+        </div>
+        <div class="bloque">
+            <div class="sub-bloque activo">
+                <form id="imc" class="imc">
+                    <label for="altura">Altura (cm):</label>
+                    <input type="number" id="altura" min="50" max="250" value="180"><br>
+
+                    <label for="peso">Peso (kg):</label>
+                    <input type="number" id="peso" min="20" max="300" value="70"><br>
+                    <button class="post" type="submit">Calcular</button>
+                    <p id="resultado-imc"></p>
+                    <div id="clasificacion">
+                        <p><br><b><u>Equivalencia:</b></u></p><br>
+                        <p>-16.00: Infrapeso (delgadez severa)</p>
+                        <p>16.00 - 16.99: Infrapeso (delgadez moderada)</p>
+                        <p>17.00 - 18.49: Infrapeso (delgadez aceptable)</p>
+                        <p>18.50 - 24.99: Peso normal</p>
+                        <p>25.00 - 29.99: Sobrepeso</p>
+                        <p>30.00 - 34.99: Obeso (Tipo I)</p>
+                        <p>35.00 - 40.00: Obeso (Tipo II)</p>
+                        <p>+40.00: Obeso (Tipo III)</p>
+                    </div>
+                </form>
+            </div>
+            <div class="sub-bloque">
+                <form id="fcm" class="fcm">
+                    <label for="sexo">Sexo: </label>
+                    <select name="sexo" id="sexo" size="1">
+                        <option value="Hombre">Hombre</option>
+                        <option value="Mujer">Mujer</option>
+                    </select><br>
+                    <label for="edad">Edad: </label>
+                    <input type="number" min="1" max="130" name="edad" id="edad" value="18"><br>
+                    <button class="post" type="submit">Calcular</button>
+                    
+                    <p id="resultado"></p>
+                    <p id="reposo" style="color: blue"></p>
+                    <p id="recuperacion" style="color: green"></p>
+                    <p id="aerobica" style="color: gold"></p>
+                    <p id="anaerobica" style="color: darkorange"></p>
+                    <p id="roja" style="color: red"></p>
+                </form>
+            </div>
+            <div class="sub-bloque">
+              <form id="categoria" class="categoria">
+                  <label for="nombre">Nombre: </label>
+                  <input type="text" id="nombre" placeholder="Introduce aquí tu nombre"><br>
+                  <label for="edad2">Año de nacimiento: </label>
+                  <input type="number" min="1900" max="2022" id="edad2" value="2001"><br>
+                  <button class="post" type="submit">Calcular</button>
+                  <p id="resultado-categoria"></p>
+                  <div id="categoria-tipo">
+                      <p><br><b><u>Categorías:</b></u></p><br>
+                      <p>Nacido en el año 2013 y posteriores: Micros</p>
+                      <p>2011 y 2012: Pre-Benjamín</p>
+                      <p>2009 y 2010: Benjamín</p>
+                      <p>2007 y 2008: Alevin</p>
+                      <p>2005 y 2006: Infantil</p>
+                      <p>2003 y 2004: Cadete</p>
+                      <p>2001 y 2002: Juvenil</p>
+                      <p>Nacidos en el año 2000 y anteriores: Senior</p>
+                  </div>
+              </form>  
+            </div>
+            <div class="sub-bloque">
+                <h2>Horarios de Mañana</h2>
+                <div id="horarioAM"></div>
+                <hr class="separadorArticulo">
+                <h2>Horarios de Tarde</h2>
+                <div id="horarioPM"></div>
+            </div>
+            <div class="sub-bloque tienda">
+                <form id="compra">
+                    <div class="grid">
+                        <div class="tarjeta">
+                            <img src="./imagenes/mancuernas.png" alt="mancuernas" class="foto-articulo">
+                            <p class="nombre-articulo">Set de mancuernas.</p>
+                            <div class="contador">
+                                <p>Unidades: </p>
+                                <input type="number" min="0" value="0">
+                            </div>
+                            <p class="precio">Precio: 38€/unidad</p>
+                        </div>
+                        <div class="tarjeta">
+                            <img src="./imagenes/pelota_fitness.png" alt="fitness_ball" class="foto-articulo">
+                            <p class="nombre-articulo">Pelota de Fitness.</p>
+                            <div class="contador">
+                                <p>Unidades: </p>
+                                <input type="number" min="0" value="0">
+                            </div>
+                            <p class="precio">Precio: 25€/unidad</p>
+                        </div>
+                        <div class="tarjeta">
+                            <img src="./imagenes/barras.png" alt="barras" class="foto-articulo">
+                            <p class="nombre-articulo">Barras paralelas Fitness.</p>
+                            <div class="contador">
+                                <p>Unidades:</p>
+                                <input type="number" min="0" value="0">
+                            </div>
+                            <p class="precio">Precio: 50€/unidad</p>
+                        </div>
+                        <div class="tarjeta">
+                            <img src="./imagenes/esterilla.png" alt="esterilla" class="foto-articulo">
+                            <p class="nombre-articulo">Esterilla negra.</p>
+                            <div class="contador">
+                                <p>Unidades: </p>
+                                <input type="number" min="0" value="0">
+                            </div>
+                            <p class="precio">Precio: 14€/unidad</p>
+                        </div>
+                        <div class="tarjeta">
+                            <img src="./imagenes/proteina_polvo.png" alt="proteina_polvo" class="foto-articulo">
+                            <p class="nombre-articulo">Proteina en polvo (900g).</p>
+                            <div class="contador">
+                                <p>Unidades: </p>
+                                <input type="number" min="0" value="0">
+                            </div>
+                            <p class="precio">Precio: 64€/unidad</p>
+                        </div>
+                        <div class="tarjeta">
+                            <img src="./imagenes/proteina_barrita.png" alt="barrita_proteica" class="foto-articulo">
+                            <p class="nombre-articulo">Barritas proteicas 15u.</p>
+                            <div class="contador">
+                                <p>Unidades: </p>
+                                <input type="number" min="0" value="0">
+                            </div>
+                            <p class="pecio">Precio: 30€/pack</p>
+                        </div>
+                    </div>
+                    <hr class="separadorArticulo">
+                    <button class='post' type="submit" style="margin: auto;">Añadir al carrito</button>
+                </form>
+            </div>
+            <div id="carrito" class="sub-bloque"></div>
+        </div>
+    </main>
+    <hr class="footer">
+    <footer>
+        <h3>Autor:</h3>
+        <p>Diego Viador Ferreira</p>
+    </footer>
+</body>
+<!--
+El script tiene que ir al final para que se carge primero la pagina y luego el script.
+De no ser asi, los eventListeners detectaran valores nulos, por ejemplo.
+-->
+<script type="text/javascript" src="./js/main.js"></script>
+<script type="text/javascript" src="./js/IMC.js"></script>
+<script type="text/javascript" src="./js/FCM.js"></script>
+<script type="text/javascript" src="./js/categoria.js"></script>
+<script type="text/javascript" src="./js/horario.js"></script>
+<script type="text/javascript" src="./js/tienda.js"></script>
+</html>
